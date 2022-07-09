@@ -3,5 +3,5 @@
      do{
           echo "รอบที่ $x <br/>";
           $x++;
-     }while($x<=1);
+     }while($x<1);
 ?>
