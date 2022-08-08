@@ -2,7 +2,7 @@
 // error_reporting(E_ALL);
 
 //เชื่อมต่อฐานข้อมูล
-$conn = mysqli_connect("localhost", "root", "", "student", 3306);
+$conn = mysqli_connect("localhost", "root", "", "student");
 
 //ตรวจสอบการเชื่อมต่อฐานข้อมูล
 if (!$conn) {
