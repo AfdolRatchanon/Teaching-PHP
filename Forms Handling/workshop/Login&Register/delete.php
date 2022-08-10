@@ -11,9 +11,7 @@ $sql = "DELETE FROM tbl_student WHERE id = $id";
 //ตรวจสอบการลบช้อมูลสำเร็จหรือไม่
 if (mysqli_query($conn, $sql)) {
     //ถ้าลบสำเร็จให้เปลี่ยนเส้นทางไปหน้า select.php
-    echo "<script>";
-    echo "window.location.href = 'select.php'";
-    echo "</script>";
+    JS::goTo('select.php');
 }
 
 //ปิดการเชื่อมต่อฐานข้อมูล

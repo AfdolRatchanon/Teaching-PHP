@@ -14,23 +14,13 @@ $sql = "INSERT INTO `tbl_student`
 (`id`, `firstname`, `lastname`, `username`, `password`) VALUES
 (NULL, '$fname', '$lname', '$user', '$pass');";
 
-//ตรวจสอบการบันทึกข้อมูลเข้าฐานข้อมูล
-// if (mysqli_query($conn, $sql)) {
-//     echo "สมัครสมาชิกสำเร็จ";
-// } else {
-//     echo "เกิดข้อผิดพลาดไม่สามารถสมัครสมาชิกได้" . mysqli_error($conn);
-// }
-
-//ตรวจสอบข้อมูลที่ส่งมาจาก HTML FORM
-if (isset($_POST['fname']) && isset($_POST['fname']) && isset($_POST['fname']) && isset($_POST['fname'])) {
-    if (mysqli_query($conn, $sql)) {
-        echo "สมัครสมาชิกสำเร็จ";
-        echo "<script>window.location.href = 'select.php'</script>";
-    } else {
-        echo "เกิดข้อผิดพลาดไม่สามารถสมัครสมาชิกได้" . mysqli_error($conn);
-    }
+// ตรวจสอบการบันทึกข้อมูลเข้าฐานข้อมูล
+if (mysqli_query($conn, $sql)) {
+    JS::alert("สมัครสมาชิกสำเร็จ");
+    JS::goTo('select.php');
 } else {
-    echo "กรุณากรอกข้อมูลให้ครบก่อนกดส่ง";
+    JS::alert("เกิดข้อผิดพลาดไม่สามารถสมัครสมาชิกได้" . mysqli_error($conn));
 }
+
 
 mysqli_close($conn);
