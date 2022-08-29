@@ -1,4 +1,0 @@
-<?php
-echo $_GET["txt"];
-?>
-<?php ?>
